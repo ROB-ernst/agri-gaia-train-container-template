@@ -1,0 +1,79 @@
+{
+  "description": "SomeAwesomeNet (Someone et al., 2022) with some function provided by SomeProvider. Documentation: https://some-documentation.net",
+  "type": "object",
+  "required": [
+    "epochs",
+    "batch-size",
+    "img-size",
+    "optimizer",
+    "learning-rate",
+    "lr-scheduler",
+    "train-split",
+    "test-split"
+  ],
+  "properties": {
+    "epochs": {
+      "title": "Epochs",
+      "type": "integer",
+      "default": 50,
+      "minimum": 1,
+      "description": "Number of times the training dataset will be passed through the network."
+    },
+    "batch-size": {
+      "title": "Batch size",
+      "type": "integer",
+      "default": 32,
+      "minimum": 1,
+      "description": "Number of images with targets in each training batch."
+    },
+    "img-size": {
+      "title": "Image size",
+      "type": "integer",
+      "default": 300,
+      "minimum": 1,
+      "description": "Square image size used for resizing height and width of all input images."
+    },
+    "optimizer": {
+      "title": "Optimizer",
+      "type": "string",
+      "default": "AdamW",
+      "description": "Any optimizer implementation provided by 'torch.optim'."
+    },
+    "lr-scheduler": {
+        "title": "Learning Rate Scheduler",
+        "type": "string",
+        "default": "ReduceLROnPlateau",
+        "description": "Learning rate scheduler used while training."
+    },
+    "learning-rate": {
+      "title": "Learning rate",
+      "type": "number",
+      "default": 0.001,
+      "minimum": 0,
+      "description": "Step size for moving towards a minimum of the loss function."
+    },
+    "weight-decay": {
+      "title": "Weight decay",
+      "type": "number",
+      "default": 0.01,
+      "minimum": 0,
+      "description": "Penalty on the L2 norm of the network weights."
+    },
+    "train-split": {
+      "title": "Train split",
+      "type": "number",
+      "default": 0.8,
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Percentage of the dataset used for training."
+    },
+    "test-split": {
+      "title": "Test split",
+      "type": "number",
+      "default": 0.2,
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Percentage of the dataset used for testing the trained model."
+    }
+  }
+}

@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2024 University of Applied Sciences Osnabrück
+# SPDX-FileContributor: Andreas Schliebitz
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# This file contains your project specific Python requirements
+
+pytorch-lightning==1.7.7
