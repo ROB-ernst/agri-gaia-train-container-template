@@ -36,8 +36,7 @@ RUN apt update \
 RUN sed -i '/user_allow_other/s/^#//g' /etc/fuse.conf
 
 # Update pip and install mandatory Python requirements
-RUN python -m pip install --upgrade pip && \
-      pip install ujson==5.4.0 numpy==1.23.3 Shapely==1.8.4 \
+RUN pip install ujson==5.4.0 numpy==1.23.3 Shapely==1.8.4 \
       xmltodict==0.13.0 scikit-learn==1.1.2 pyyaml==6.0 \
       tf2onnx==1.14.0 onnxmltools==1.11.2
 
